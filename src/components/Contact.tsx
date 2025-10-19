@@ -7,8 +7,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com"
+      value: "ayham.alaaeddin@gmail.com",
+      href: "mailto:ayham.alaaeddin@gmail.com"
     },
     {
       icon: Github,
