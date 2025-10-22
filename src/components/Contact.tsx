@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import cv from "../assets/cv.pdf";
 
 const Contact = () => {
   const contactMethods = [
@@ -13,20 +14,26 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/yourusername",
-      href: "https://github.com"
+      value: "github.com/ayham-da",
+      href: "https://github.com/ayham-da"
+    },
+    {
+      icon: Github,
+      label: "GitHub",
+      value: "github.com/ayham-eddin",
+      href: "https://github.com/ayham-eddin"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/yourprofile",
-      href: "https://linkedin.com"
+      value: "linkedin.com/in/ayham-alaa-eddin",
+      href: "https://www.linkedin.com/in/ayham-alaa-eddin/"
     },
     {
       icon: FileText,
       label: "Resume",
       value: "Download CV",
-      href: "#"
+      href: cv
     }
   ];
 
@@ -73,7 +80,7 @@ const Contact = () => {
             className="bg-primary hover:bg-primary/90 shadow-lg hover:shadow-glow transition-all"
             asChild
           >
-            <a href="mailto:your.email@example.com">
+            <a href="mailto:ayham.alaaeddin@gmail.com">
               <Mail className="w-5 h-5 mr-2" />
               Send me an email
             </a>
