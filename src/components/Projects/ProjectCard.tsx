@@ -66,12 +66,24 @@ const ProjectCard = ({
               Code
             </a>
           </Button>
-          <Button size="sm" className="bg-primary hover:bg-primary/90" asChild>
-            <a href={project.demo} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="w-4 h-4 mr-2" />
-              Live Demo
-            </a>
-          </Button>
+          <Button 
+                  size="sm"
+                  className="bg-primary hover:bg-primary/90"
+                  asChild={!!project.demo}
+                  disabled={!project.demo}
+                >
+                  {project.demo ? (
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Live Demo
+                    </a>
+                  ) : (
+                    <>
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Live Demo
+                    </>
+                  )}
+                </Button>
         </div>
       </CardContent>
     </Card>

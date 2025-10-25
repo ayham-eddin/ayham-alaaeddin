@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 import cv from "../assets/cv.pdf";
 
 const Contact = () => {
@@ -30,9 +30,9 @@ const Contact = () => {
       href: "https://www.linkedin.com/in/ayham-alaa-eddin/"
     },
     {
-      icon: FileText,
+      icon: Download,
       label: "Resume",
-      value: "Download CV",
+      value: "download my CV",
       href: cv
     }
   ];
