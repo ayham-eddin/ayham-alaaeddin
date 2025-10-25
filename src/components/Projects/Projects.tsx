@@ -2,42 +2,45 @@ import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { Button } from "@/components/ui/button";
 
+import Image1 from '../../assets/project01.jpeg';
+import Image2 from '../../assets/project02.png';
+import Image3 from '../../assets/project03.png';
+
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with real-time inventory management and payment processing",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      id: 1,
+      title: "Project Discover & Share Places",
+      description: "ExploreHub is a modern web and mobile application designed to help users discover new places and share their favorite spots with the community. Whether you’re looking for hidden cafés, scenic parks, or must-visit attractions, ExploreHub makes it easy to find, review, and contribute locations.",
+      tech: ["React", "Node.js", "MongoDB", "ExpressJS"],
       category: "FullStack",
-      github: "https://github.com",
-      demo: "https://example.com"
+      github: "https://github.com/ayham-da/my-projekt/tree/master'",
+      demo: "",
+      image: Image1
     },
     {
-      title: "Task Management App",
+      id: 1,
+      title: "Schu Fi Ma Fi – The Syrian Cultural Collective ",
       description: "Collaborative project management tool with real-time updates and team collaboration features",
-      tech: ["Next.js", "TypeScript", "MongoDB", "WebSockets"],
-      category: "FullStack",
-      github: "https://github.com",
-      demo: "https://example.com"
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Data visualization platform for business intelligence with interactive charts and reports",
-      tech: ["React", "D3.js", "Python", "FastAPI"],
+      tech: ["React", "TypeScript"],
       category: "Frontend",
-      github: "https://github.com",
-      demo: "https://example.com"
+      github: "https://github.com/ayham-da/schufi--mafi",
+      demo: "https://schufimafi-collective.com/'",
+      image: Image2
+      
     },
     {
-      title: "Social Media API",
-      description: "RESTful API for a social networking platform with authentication and content management",
-      tech: ["Node.js", "Express", "MongoDB", "JWT"],
+      id: 3,
+      title: "Keyboard Reader App",
+      description: "This app reads the content of the **keyboard.txt** file within the project and displays it in the terminal. It’s a simple utility for processing and outputting text data, making it useful for debugging, logging, or quick file previews.",
+      tech: ["Node.js"],
       category: "Backend",
-      github: "https://github.com",
-      demo: "https://example.com"
+      github: "https://github.com/ayham-da/print-keyboard-2",
+      demo: "",
+      image: Image3
     }
   ];
 
