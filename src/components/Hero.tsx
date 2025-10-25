@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import heroImage from "@/assets/hero-workspace.jpg";
+import ayhamImage from "@/assets/ayham.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -28,7 +29,7 @@ const Hero = () => {
           <div className="animate-fade-in">
             <div className="flex justify-center mb-6">
               <Avatar className="w-32 h-32 border-4 border-primary/20">
-                <AvatarImage src="/src/assets/ayham.png" alt="Ayham Alaa Eddin" />
+                <AvatarImage src= {ayhamImage} alt="Ayham Alaa Eddin" />
                 <AvatarFallback className="text-4xl">AA</AvatarFallback>
               </Avatar>
             </div>

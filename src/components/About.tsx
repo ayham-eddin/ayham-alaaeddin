@@ -1,4 +1,6 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import ayhamImage from "@/assets/ayham.jpg";
+
 
 const About = () => {
   return (
@@ -9,7 +11,7 @@ const About = () => {
         </h2>
         <div className="flex flex-col md:flex-row gap-8 items-center md:items-start mb-8">
           <Avatar className="w-48 h-48 shrink-0 border-4 border-primary/20">
-            <AvatarImage src="/src/assets/ayham.png" alt="Ayham Alaa Eddin" />
+            <AvatarImage src= {ayhamImage} alt="Ayham Alaa Eddin" />
             <AvatarFallback className="text-6xl">AA</AvatarFallback>
           </Avatar>
           <div className="space-y-6 text-lg text-muted-foreground">
