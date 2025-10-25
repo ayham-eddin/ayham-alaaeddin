@@ -55,6 +55,7 @@ const Contact = () => {
               <CardContent className="p-6">
                 <a 
                   href={method.href}
+                  download={method.label === "Resume" ? true : undefined}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"

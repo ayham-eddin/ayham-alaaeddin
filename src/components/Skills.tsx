@@ -6,12 +6,12 @@ const Skills = () => {
     {
       icon: Code2,
       title: "Frontend Development",
-      skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js"]
+      skills: ["React", "TypeScript", "Next.js", "Redux", "Angular ( Basics )", "Tailwind CSS"]
     },
     {
       icon: Database,
       title: "Backend Development",
-      skills: ["Node.js", "Python", "PostgreSQL", "MongoDB", "REST APIs"]
+      skills: ["Node.js", "Python ( Basics )", "Java ( Basics )", "MySQL", "MongoDB", "REST APIs"]
     },
     {
       icon: Globe,
@@ -21,7 +21,7 @@ const Skills = () => {
     {
       icon: Zap,
       title: "Tools & Practices",
-      skills: ["Git", "Docker", "CI/CD", "Agile", "Testing"]
+      skills: ["Git", "Docker", "CI/CD", "Agile", "Testing", "Jest", "Cypress"]
     }
   ];
 
