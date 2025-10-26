@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Image1 from '../../assets/project01.jpeg';
 import Image2 from '../../assets/project02.png';
 import Image3 from '../../assets/project03.png';
+import Image4 from '../../assets/project04.png';
 
 
 const Projects = () => {
@@ -41,6 +42,16 @@ const Projects = () => {
       github: "https://github.com/ayham-da/print-keyboard-2",
       demo: "",
       image: Image3
+    },
+    {
+      id: 4,
+      title: "Personal Portfolio Website",
+      description: "A personal portfolio website to showcase my projects, skills, and experience as a web developer.",
+      tech: ["React", "TypeScript", "Tailwind CSS"],
+      category: "Frontend",
+      github: "https://github.com/ayham-eddin/ayham-alaaeddin",
+      demo: "https://ayham-eddin.github.io/ayham-alaaeddin/",
+      image: Image4
     }
   ];
 
