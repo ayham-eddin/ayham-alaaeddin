@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Card,
   CardContent,
@@ -17,35 +18,40 @@ type Project = {
   image: string;
 };
 
-const ProjectCard = ({
-  project,
-  index,
-}: {
-  project: Project;
-  index?: number;
-}) => {
+const ProjectCard = ({ project, index }: { project: Project; index?: number }) => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <Card
-      key={project.title}
       className="bg-card/50 backdrop-blur border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow animate-fade-in"
       style={{ animationDelay: `${(index ?? 0) * 100}ms` }}
     >
-      <div className="overflow-hidden rounded-t-lg">
+      {/* Skeleton + Image Wrapper */}
+      <div className="overflow-hidden rounded-t-lg relative bg-muted">
+        {/* Skeleton */}
+        {!loaded && (
+          <div className="w-full aspect-video animate-pulse bg-muted-foreground/20" />
+        )}
+
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+          className={`w-full aspect-video object-cover object-center transition-transform duration-500 ease-out hover:scale-105 ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}
+          onLoad={() => setLoaded(true)}
+          loading="lazy"
         />
       </div>
+
       <CardHeader>
         <CardTitle className="text-xl">{project.title}</CardTitle>
-        <CardDescription className="text-base">
-          {project.description}
-        </CardDescription>
+        <CardDescription className="text-base">{project.description}</CardDescription>
       </CardHeader>
+
       <CardContent className="space-y-4">
         <div className="flex flex-wrap gap-2">
-          {project.tech.map((tech: string) => (
+          {project.tech.map((tech) => (
             <span
               key={tech}
               className="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm"
@@ -54,6 +60,7 @@ const ProjectCard = ({
             </span>
           ))}
         </div>
+
         <div className="flex gap-3">
           <Button
             variant="outline"
@@ -66,24 +73,25 @@ const ProjectCard = ({
               Code
             </a>
           </Button>
-          <Button 
-                  size="sm"
-                  className="bg-primary hover:bg-primary/90"
-                  asChild={!!project.demo}
-                  disabled={!project.demo}
-                >
-                  {project.demo ? (
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </a>
-                  ) : (
-                    <>
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </>
-                  )}
-                </Button>
+
+          <Button
+            size="sm"
+            className="bg-primary hover:bg-primary/90"
+            asChild={!!project.demo}
+            disabled={!project.demo}
+          >
+            {project.demo ? (
+              <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Live Demo
+              </a>
+            ) : (
+              <>
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Live Demo
+              </>
+            )}
+          </Button>
         </div>
       </CardContent>
     </Card>
