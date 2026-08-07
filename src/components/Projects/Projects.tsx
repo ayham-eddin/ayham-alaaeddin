@@ -50,6 +50,17 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: "Schu Fi Ma Fi – The Syrian Cultural Collective",
+      description:
+        "A CMS for a cultural collective. It allows for the easy management of content such as events, news, and other website content.",
+      tech: ["React", "TypeScript", "Node.js", "MongoDB", "ExpressJS"],
+      category: "FullStack",
+      github: "https://github.com/ayham-eddin/collective-platform",
+      demo: "https://schufimafi-collective.vercel.app/",
+      image: Image2,
+    },
+    {
+      id: 3,
       title: "Project Discover & Share Places",
       description:
         "ExploreHub helps users discover new places and share their favorite locations with the community.",
@@ -58,17 +69,6 @@ const Projects = () => {
       github: "https://github.com/ayham-da/my-projekt/tree/master'",
       demo: "",
       image: Image1,
-    },
-    {
-      id: 3,
-      title: "Schu Fi Ma Fi – The Syrian Cultural Collective",
-      description:
-        "Collaborative project management tool with real-time updates and team collaboration features.",
-      tech: ["React", "TypeScript"],
-      category: "Frontend",
-      github: "https://github.com/ayham-da/schufi--mafi",
-      demo: "https://schufimafi-collective.com/'",
-      image: Image2,
     },
     {
       id: 4,
@@ -112,7 +112,7 @@ const Projects = () => {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentProjects = filteredProjects.slice(
     indexOfFirstItem,
-    indexOfLastItem
+    indexOfLastItem,
   );
 
   const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
